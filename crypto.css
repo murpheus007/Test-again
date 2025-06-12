@@ -1,0 +1,179 @@
+section {
+   padding: 1rem;
+}
+
+.crypto-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   gap: 1rem;
+   max-width: 1200px;
+   margin: auto;
+   flex-wrap: wrap;
+}
+.crypto-container-none {
+   display: grid;
+   max-width: 1200px;
+   margin: auto;
+   flex-wrap: wrap;
+}
+
+.crypto-image img {
+   width: 100%;
+   height: 500px;
+   border-radius: 12px;
+}
+
+.crypto-text {
+   display: grid;
+   align-items: center;
+   flex: 1;
+   color: #333;
+}
+
+.crypto-tag {
+   display: inline-block;
+   padding: 0.25rem 0.75rem;
+   border: 1px solid var(--color-primary);
+   color: var(--color-primary);
+   border-radius: 30px;
+   font-size: 0.85rem;
+   font-weight: 600;
+   margin-bottom: 1rem;
+   text-transform: uppercase;
+   background-color: rgba(44, 121, 205, 0.05);
+   justify-self: center;
+}
+
+.crypto-text h2 {
+   font-size: 2rem;
+   margin-bottom: 1rem;
+   font-weight: bold;
+}
+
+.crypto-text h3 {
+   font-size: 1.25rem;
+   margin-top: 2rem;
+   margin-bottom: 0.5rem;
+   font-weight: 600;
+}
+
+.crypto-text p {
+   line-height: 1.7;
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 1rem;
+}
+
+/* Accordion FAQ Styles */
+.crypto-faq {
+   margin-top: 2rem;
+   border-top: 1px solid #ccc;
+}
+
+.faq-item {
+   border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+   background: none;
+   border: none;
+   width: 100%;
+   text-align: left;
+   padding: 1rem;
+   font-size: 1rem;
+   font-weight: bold;
+   cursor: pointer;
+   color: #333;
+   transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+   background: #f8f8f8;
+}
+
+.faq-answer {
+   max-height: 0;
+   overflow: hidden;
+   padding: 0 1rem;
+   font-size: 0.95rem;
+   color: #555;
+   transition: max-height 0.3s ease;
+}
+
+.faq-answer.open {
+   max-height: 1000px; /* Enough to reveal full answer */
+   padding-bottom: 1rem;
+}
+
+/* Optional CTA Button Styles */
+.cta-button {
+   display: inline-block;
+   margin-top: 1rem;
+   padding: 0.75rem 1.5rem;
+   background-color: #2c3e50;
+   color: white;
+   text-decoration: none;
+   border-radius: 4px;
+   font-weight: bold;
+   transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+   background-color: #1a242f;
+}
+
+.crypto-price-factors ul {
+   list-style: none;
+   padding-left: 20px;
+   margin: 1rem 0;
+}
+.crypto-benefits ul li strong {
+   color: var(--color-primary);
+}
+
+.crypto-price-factors ul li {
+   position: relative;
+   padding-left: 1.75rem;
+   margin-bottom: 0.75rem;
+   font-size: 1rem;
+   color: #444;
+   line-height: 1.6;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+
+.crypto-price-factors ul li::before {
+   content: '✓';
+   position: absolute;
+   left: 0;
+   top: 0;
+   color: var(--color-primary, #2c79cd);
+   font-weight: bold;
+   font-size: 1.1rem;
+}
+
+.crypto-price-factors ul li:hover {
+   color: var(--color-primary, #2c79cd);
+}
+
+@media (max-width: 768px) {
+   .crypto-container {
+      grid-template-columns: 1fr;
+   }
+
+   .crypto-text h2 {
+      font-size: 1.5rem;
+   }
+   .crypto-text p {
+      font-size: 0.85rem;
+   }
+
+   .crypto-text h3 {
+      font-size: 1.1rem;
+   }
+
+   .crypto-price-factors li {
+      font-size: 0.85rem;
+   }
+}

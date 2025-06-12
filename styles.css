@@ -241,6 +241,17 @@ h2 {
    background-color: #00b185;
 }
 
+.feature-icon {
+  width: 48px;              /* or 1.5rem */
+  height: 48px;
+  stroke: #015fc9;
+  display: inline-block;    /* Prevent SVG from stretching full width */
+  vertical-align: middle;   /* Align better with text */
+  flex-shrink: 0;           /* Prevent shrinking in flexbox containers */
+}
+
+
+
 
 
 /* Mobile */

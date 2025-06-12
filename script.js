@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
          navbarmenu.classList.add('scrolled');
       } else {
          navbar.classList.remove('scrolled');
-         navbamenu.classList.remove('scrolled');
+         navbarmenu.classList.remove('scrolled');
       }
    };
 
