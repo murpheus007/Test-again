@@ -13,31 +13,13 @@
    height: 100vh;
    background-size: cover;
    background-position: center;
-   color: white;
+   color: var(--color-text);
    display: flex;
    align-items: center;
    justify-content: center;
    padding: 0 1rem;
    transition: background-image 0.8s ease-in-out;
    position: relative;
-}
-
-/* Overlay (optional for better text readability) */
-.hero::before {
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.4) 40%,
-      rgba(0, 0, 0, 0.1) 80%,
-      rgba(0, 0, 0, 0) 100%
-   );
-   z-index: 1;
 }
 
 .hero-content {
@@ -55,12 +37,12 @@
    font-size: 4.5rem;
    line-height: 62px;
    margin-bottom: 1rem;
-   max-width: 50rem;
+   max-width: 54rem;
    text-align: start;
 }
 
 .hero p {
-   font-weight: medium;
+   font-weight: bold;
    font-size: 16px;
    line-height: 1.6em;
    margin-bottom: 2rem;
@@ -125,7 +107,7 @@
    align-items: center;
 
    p {
-      width: 670px;
+      max-width: 670px;
    }
 }
 
@@ -488,12 +470,6 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
    }
-   .contact-overlay {
-      background-color: rgba(44, 121, 205, 0.9);
-      width: 100%;
-      height: 100%;
-      padding: 100px 16px;
-   }
 }
 
 /* Testimonials section */
@@ -658,6 +634,9 @@
    .testimonial-avatars {
       display: none;
    }
+      .contact-overlay {
+      padding: 100px 16px;
+   }
 }
 
 /* Footer */
@@ -706,18 +685,6 @@
 .footer-section .icon {
    font-size: 1.1rem;
    margin-top: 2px;
-}
-
-.footer-section .logo {
-   display: flex;
-   align-items: center;
-   gap: 0.5rem;
-   margin-bottom: 1rem;
-}
-
-.footer-section .logo img {
-   width: 40px;
-   height: 40px;
 }
 
 .footer-section .logo span {

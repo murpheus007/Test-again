@@ -4,12 +4,12 @@ const heroText = document.getElementById('hero-text');
 
 const slides = [
    {
-      background: 'url("images/hero.jpg")',
+      background: 'url("images/group1.png")',
       title: 'The Complete FX and CFD Trading Experience',
       text: 'Award-winning platforms, tight spreads, low commissions and dedicated support. See why we’re the trading partner of choice for 1,000,000 traders around the world',
    },
    {
-      background: 'url("images/hero1.webp")',
+      background: 'url("images/group2.png")',
       title: 'A World Class Trading Experience',
       text: 'Be empowered to trade CFDs on FX, Stocks, Commodities, Crypto, Indices & Options. Get advanced tools, personalised support, uncompromising security.',
    },
