@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
    const navbar = document.getElementById('navbar');
+   const navbarmenu = document.getElementById('nav-menu');
+   const hamburger = document.getElementById('hamburger');
    const links = document.querySelectorAll('.nav-link');
    const sections = document.querySelectorAll('section');
+   let lastScroll = 0;
 
    // Highlight active link on scroll
    const setActiveLink = () => {
-      let scrollPos = window.scrollY + 100; // +100 to trigger a bit earlier
+      let scrollPos = window.scrollY + 100;
 
       sections.forEach((section) => {
          const top = section.offsetTop;
@@ -23,39 +26,42 @@ document.addEventListener('DOMContentLoaded', () => {
       });
    };
 
-   // Add class to navbar when not at top
+   // Navbar scrolled state
    const handleNavbarScroll = () => {
       if (window.scrollY > 20) {
          navbar.classList.add('scrolled');
+         navbarmenu.classList.add('scrolled');
       } else {
          navbar.classList.remove('scrolled');
+         navbamenu.classList.remove('scrolled');
       }
    };
 
-   // On scroll
+   // Navbar hide/show on scroll
+   const handleNavbarVisibility = () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll && currentScroll > 60) {
+         // Scrolling down
+         navbar.classList.add('hide');
+         navbarmenu.classList.remove('active');
+      } else {
+         // Scrolling up
+         navbar.classList.remove('hide');
+         hamburger.classList.remove('active');
+      }
+
+      lastScroll = currentScroll;
+   };
+
+   // Scroll events
    window.addEventListener('scroll', () => {
       setActiveLink();
       handleNavbarScroll();
+      handleNavbarVisibility();
    });
 
-   // Initial check
+   // Initial run
    setActiveLink();
    handleNavbarScroll();
-});
-
-let lastScroll = 0;
-const navbar = document.getElementById('navbar');
-
-window.addEventListener('scroll', () => {
-   const currentScroll = window.pageYOffset;
-
-   if (currentScroll > lastScroll && currentScroll > 60) {
-      // Scrolling down
-      navbar.classList.add('hide');
-   } else {
-      // Scrolling up
-      navbar.classList.remove('hide');
-   }
-
-   lastScroll = currentScroll;
 });

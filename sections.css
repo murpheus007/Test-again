@@ -117,7 +117,7 @@
    height: 100%;
    display: flex;
    align-items: center;
-   padding: 2rem;
+   padding: 1rem;
 }
 
 .how-it-works-content {
@@ -298,12 +298,12 @@
    gap: 2rem;
 }
 
-@media  screen and (max-width: 768px) {
-    .security-grid {
+@media screen and (max-width: 768px) {
+   .security-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
-   }  
+   }
 }
 
 @media screen and (min-width: 768px) {
@@ -634,7 +634,7 @@
    .testimonial-avatars {
       display: none;
    }
-      .contact-overlay {
+   .contact-overlay {
       padding: 100px 16px;
    }
 }
@@ -683,8 +683,7 @@
 }
 
 .footer-section .icon {
-   font-size: 1.1rem;
-   margin-top: 2px;
+width: fit-content;
 }
 
 .footer-section .logo span {
@@ -709,7 +708,7 @@
    flex-wrap: wrap;
 }
 
-.newsletter-form input[type="email"] {
+.newsletter-form input[type='email'] {
    padding: 0.75rem;
    flex: 1;
    border: none;
@@ -734,6 +733,10 @@
 }
 
 @media (max-width: 600px) {
+   .site-footer {
+      padding: 1rem;
+      font-family: 'Segoe UI', sans-serif;
+   }
    .newsletter-form {
       flex-direction: column;
    }
