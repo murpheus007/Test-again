@@ -197,6 +197,50 @@ nav li.nav-item-has-dropdown:hover > .dropdown {
    transition: transform 0.3s ease;
 }
 
+h2 {
+   font-size: 2rem;
+   letter-spacing: -0.04em;
+   line-height: 1.1em;
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
+.btn-primary {
+   display: inline-block;
+   background-color: var(--color-primary);
+   color: white;
+   padding: 1rem 2rem;
+   border: none;
+   border-radius: 5px;
+   font-size: .85rem;
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+
+.btn-primary:hover {
+   background-color: var(--color-secondary);
+}
+
+.btn-secondary {
+   display: inline-block;
+   background-color: var(--color-secondary);
+      color: white;
+   padding: 1rem 2rem;
+   border: none;
+   border-radius: 5px;
+   font-size: .85rem;
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+   background-color: #00b185;
+}
+
 
 
 /* Mobile */
@@ -263,4 +307,15 @@ nav li.nav-item-has-dropdown:hover > .dropdown {
    .nav-item-has-dropdown > a::after {
       content: '';
    }
+
+   h2 {
+      font-size: 1.5rem;
+      line-height: 1.4em;
+      letter-spacing: -0.04em;
+   }
+
+   p {
+      font-size: .9rem;
+   }
+
 }

@@ -1,0 +1,40 @@
+.features-grid {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(300px, 1fr));
+   gap: 1rem;
+}
+
+.feature-box {
+   border: 8px solid var(--color-neutral-light);
+   border-radius: 8px;
+   padding: 1rem;
+   text-align: center;
+   background: white;
+}
+
+.feature-icon {
+   font-size: 2rem;
+   margin-bottom: 0.5rem;
+   color: var(--color-primary);
+}
+
+.feature-text {
+   font-weight: 600;
+   font-size: 1rem;
+   color: var(--color-text);
+   text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+   .features-grid {
+         grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: 0.5rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .features-grid {
+    grid-template-columns: 1fr;
+      gap: 0.5rem;
+   }
+}
